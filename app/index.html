@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <!-- DNS
+========================================= -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+
+  <!-- init
+========================================= -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- old browser optimization
+========================================= -->
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+
+  <!-- basic
+========================================= -->
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+  <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+
+  <!-- website
+========================================= -->
+  <link rel="shortcut icon" type="image/icon" href="favicon.ico">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Browser for china 
+========================================= -->
+  <meta http-equiv="Cache-Control" content="no-siteapp" describe="禁止百度转码破坏样式">
+  <meta name="screen-orientation" content="portrait" describe="UC强制竖屏">
+  <meta name="x5-orientation" content="portrait" describe="QQ浏览器X5竖屏">
+  <meta name="full-screen" content="yes" describe="UC全屏">
+  <meta name="x5-fullscreen" content="true" describe="QQ浏览器X5全屏">
+  <meta name="browsermode" content="application" describe="UC应用模式">
+  <meta name="x5-page-mode" content="app" describe="QQ浏览器X5应用模式">
+  <meta name="renderer" content="webkit">
+
+  <!-- IOS 
+========================================= -->
+  <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-startup-image" href="apple-startup-320x640.png"> -->
+  <!-- 适配请对照 https://developer.apple.com/library/ios/qa/qa1686/_index.html 自行添加 -->
+
+  <!-- windows 8+
+========================================= -->
+  <meta name="msapplication-TileColor" content="#fff">
+  <!-- <meta name="msapplication-TileImage" content="windows-touch-icon.png"> -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Android
+========================================= -->
+  <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+  <meta name="theme-color" content="#fff">
+  <!-- <link rel="icon" sizes="192x192" href="android-icon-192x192.png"> -->
+
+  <!-- noscript
+======================================== -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; URL=<%= htmlWebpackPlugin.options.noscriptURL %>">
+  </noscript>
+
+  <!-- 兼容旧的程序设置，替换完的话可删除 -->
+  <script type="text/javascript">
+    /**
+     * 全局定义
+     * @type {Object}
+     */
+    window.TS = {
+      MID: parseInt('{$mid}'),
+      USER_NAME: '{$username}',
+      FACE: {:json_encode($face)},
+      BASE_URL: '{:U('h5/index/index')}',
+      BUILD_URL: '{:U('h5/%controller%/%action%')}',
+      ROOT: '__ROOT__',
+      JS_ROOT: '__APP__/js/',
+      CSS_ROOT: '__APP__/css/',
+      IMG_ROOT: '__APP__/images/',
+      VERSION: '{$site.sys_version}'
+    };
+  </script>
+
+</head>
+<body>
+  <!-- 容器也是兼容老的代码 -->
+  <div
+    id="app"
+    style="
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      min-height: 100%;
+      background: #f0f0f0;
+  ">
+  </div>
+</body>
+</html>

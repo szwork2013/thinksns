@@ -1,0 +1,6 @@
+{
+    "name": "h5",
+    "resource": "dist",
+    "install-class": "Medz\\Ts\\App\\H5\\Setup\\Install",
+    "update-class": "Medz\\Ts\\App\\H5\\Setup\\Update"
+}

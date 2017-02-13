@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <!-- 预加载一些数据，方便跳转后直接显示资源 -->
+  <link rel="dns-prefetch" href="__ROOT__/">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Error: 浏览器不支持JavaScript</title>
+  <noscript>
+    <meta http-equiv="refresh" content="5; URL=<%= htmlWebpackPlugin.options.noscriptURL %>">
+  </noscript>
+</head>
+<body>
+<h1>你的浏览器不支持Javascript</h1>
+<h3>如果您之前将其浏览器的Javascript支持关闭了，请进入浏览器设置中打开，否则网站将无法运行。</h3>
+<h3>页面将5秒检查一次浏览器是否开启，所以在设置过程中无需关闭本页面。</h3>
+<h3>页面检查到Javascript支持开启后，会自动进入网站应用。</h3>
+<script type="text/javascript">
+window.location.href = '<%= htmlWebpackPlugin.options.indexURL %>';
+</script>
+</body>
+</html>

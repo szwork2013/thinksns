@@ -1,0 +1,14 @@
+--
+-- 活动分类
+-- ts_event_cate 结构
+--
+-- DROP TABLE IF EXISTS `ts_event_cate`;
+-- CREATE TABLE IF NOT EXISTS `ts_event_cate` (
+--   `cid`   int(10)      unsigned NOT NULL AUTO_INCREMENT COMMENT '分类id'  ,
+--   `name`  varchar(255)          NOT NULL                COMMENT '分类名称',
+--   `leval` int(10)      unsigned NOT NULL DEFAULT 0      COMMENT '排序等级',
+--   `del`   enum('0', '1')        NOT NULL DEFAULT '0'    COMMENT '删除标记',
+--   PRIMARY KEY (`cid`)                                                     ,
+--   INDEX `idx_name` (`name`)                                               ,
+--   KEY `idx_del` (`del`)
+-- ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='活动分类' AUTO_INCREMENT=1 ;
